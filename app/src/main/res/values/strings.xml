@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">UnsplashDaggerMVVM</string>
+    <string name="image">Image</string>
+    <string name="likes">%1$d likes</string>
+    <string name="by">By %1$s</string>
+    <string name="retry">Retry</string>
+    <string name="search">Search</string>
+    <string name="scroll_down">Scroll Down</string>
+    <string name="scroll_up">Scroll Up</string>
+    <string name="save_to_gallery">Save to Gallery</string>
+    <string name="regular_resolution">Regular resolution</string>
+    <string name="full_resolution">Full resolution</string>
+</resources>
