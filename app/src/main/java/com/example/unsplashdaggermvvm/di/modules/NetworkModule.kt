@@ -34,7 +34,7 @@ object NetworkModule {
             .cache(cache)
             .addInterceptor { chain: okhttp3.Interceptor.Chain ->
                 val newRequest = chain.request().newBuilder()
-                    .addHeader("Authorization", "Client-ID " + unsplash_access_key)
+                    .addHeader("Authorization", "Client-ID$unsplash_access_key")
                     .build()
                 chain.proceed(newRequest)
             }
@@ -56,7 +56,6 @@ object NetworkModule {
     @Provides
     fun provideApiService(retrofit: Retrofit): UnsplashService =
         retrofit.create(UnsplashService::class.java)
-
 
     @Provides
     @Singleton
