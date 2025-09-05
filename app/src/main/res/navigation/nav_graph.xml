@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/imagesListFragment">
+
+    <fragment
+        android:id="@+id/imagesListFragment"
+        android:name="com.example.unsplashdaggermvvm.ui.ImagesListFragment"
+        android:label="ImagesListFragment">
+        <action
+            android:id="@+id/to_singleImageFragment"
+            app:destination="@id/singleImageFragment" />
+        <action
+            android:id="@+id/to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleImageFragment"
+        android:name="com.example.unsplashdaggermvvm.ui.SingleImageFragment"
+        android:label="SingleImageFragment">
+
+        <argument
+            android:name="image"
+            app:argType="dev.ronnie.imageloaderdagger2.data.model.ImagesResponse"
+            app:nullable="false" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.unsplashdaggermvvm.ui.SearchFragment"
+        android:label="SearchFragment">
+        <action
+            android:id="@+id/to_singleImageFragment"
+            app:destination="@id/singleImageFragment" />
+
+    </fragment>
+</navigation>

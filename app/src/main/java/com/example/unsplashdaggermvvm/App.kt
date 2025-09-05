@@ -1,5 +1,6 @@
 package com.example.unsplashdaggermvvm
 
+import com.example.unsplashdaggermvvm.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
 

@@ -7,12 +7,12 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.findNavController
 import androidx.paging.LoadState
 import com.example.unsplashdaggermvvm.R
 import com.example.unsplashdaggermvvm.databinding.FragmentImagesListBinding
@@ -21,7 +21,6 @@ import com.example.unsplashdaggermvvm.ui.adapters.ImagesAdapter
 import com.example.unsplashdaggermvvm.ui.adapters.LoadingStateAdapter
 import com.example.unsplashdaggermvvm.utils.toast
 import com.example.unsplashdaggermvvm.viewmodels.ImagesListViewModel
-import com.example.unsplashdaggermvvm.viewmodels.ViewModelFactory
 import dagger.android.support.DaggerFragment
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
@@ -82,14 +81,14 @@ class ImagesListFragment: DaggerFragment(R.layout.fragment_images_list){
     }
 
     private fun scrollUp() {
-
+        binding.imagesList.scrollToPosition(0)
     }
 
     private fun scrollDown() {
         binding.imagesList.scrollToPosition(adapter.itemCount - 1)
     }
     private fun navigateSearch() {
-
+        binding.root.findNavController().navigate(ImagesListFragmentDirections.toSearchFragment())
     }
 
     private fun getImages() {
@@ -113,9 +112,8 @@ class ImagesListFragment: DaggerFragment(R.layout.fragment_images_list){
         }
     }
 
-
-
     private fun navigate(imagesResponse: ImagesResponse, imageView: ImageView) {
-
+        val action = ImagesListFragmentDirections.toSingleImageFragment(imagesResponse)
+        binding.root.findNavController().navigate(action)
     }
 }

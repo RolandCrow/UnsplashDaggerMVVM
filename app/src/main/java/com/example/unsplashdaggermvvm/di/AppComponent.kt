@@ -2,6 +2,8 @@ package com.example.unsplashdaggermvvm.di
 
 import android.app.Application
 import com.example.unsplashdaggermvvm.App
+import com.example.unsplashdaggermvvm.di.modules.AppModule
+import com.example.unsplashdaggermvvm.di.modules.MainActivityModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -12,7 +14,8 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AndroidInjectionModule::class,
-
+        AppModule::class,
+        MainActivityModule::class
     ]
 )
 

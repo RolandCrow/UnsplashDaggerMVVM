@@ -12,6 +12,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.findNavController
 import androidx.paging.LoadState
 import com.example.unsplashdaggermvvm.R
 import com.example.unsplashdaggermvvm.databinding.FragmentSearchBinding
@@ -108,6 +109,7 @@ class SearchFragment: DaggerFragment(R.layout.fragment_search) {
     }
 
     private fun navigate(imagesResponse: ImagesResponse, imageView: ImageView) {
-
+        val action = SearchFragmentDirections.toSingleImageFragment(imagesResponse)
+        binding.root.findNavController().navigate(action)
     }
 }

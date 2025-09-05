@@ -38,7 +38,6 @@ class SingleImageViewModel @Inject constructor(
 ): AndroidViewModel(app) {
 
     var imageString: String? = null
-    val shouldRound = false
     private val _notifyDownloading = MutableLiveData<Int>()
     val notifyDownLoading: LiveData<Int> get() = _notifyDownloading
 

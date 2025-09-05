@@ -6,7 +6,6 @@
         <variable
             name="viewmodel"
             type="com.example.unsplashdaggermvvm.viewmodels.SingleImageViewModel" />
-
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,14 +19,11 @@
             android:background="@color/dark_bg"
             android:backgroundTint="@color/dark_bg"
             android:contentDescription="@string/image"
-            app:dismiss_enabled="true"
-            app:imageFromUrl="@{viewmodel.imageString}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:shouldRound="@{viewmodel.shouldRound}"
-            app:zoom_enabled="true" />
+            />
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"

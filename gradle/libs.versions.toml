@@ -4,7 +4,7 @@ compiler = "4.16.0"
 dagger = "2.57.1"
 datastorePreferences = "1.1.7"
 fragmentKtx = "1.8.9"
-kotlin = "2.0.21"
+kotlin = "2.1.0"
 coreKtx = "1.17.0"
 junit = "4.13.2"
 junitVersion = "1.3.0"
@@ -12,18 +12,18 @@ espressoCore = "3.7.0"
 appcompat = "1.7.1"
 kotlinReflect = "2.1.0"
 legacySupportV4 = "1.0.0"
-loggingInterceptor = "5.1.0"
+loggingInterceptor = "4.12.0"
 material = "1.10.0"
 constraintlayout = "2.2.1"
 navigationFragmentKtx = "2.9.3"
 navigationFragmentKtxVersion = "2.3.4"
 navigationUiKtx = "2.9.3"
-ksp = "2.0.21-1.0.25"
 navigationUiKtxVersion = "2.3.4"
 pagingRuntimeKtx = "3.3.6"
 paletteKtx = "1.0.0"
 recyclerview = "1.4.0"
-retrofit = "3.0.0"
+retrofit = "2.10.0"
+ksp = "2.0.21-1.0.25"
 swiperefreshlayout = "1.1.0"
 
 [libraries]
@@ -60,5 +60,4 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 googleDevtoolsKsp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-
 
